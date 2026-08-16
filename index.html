@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>大学生创业方向海报</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", sans-serif;
+    background: #e8ecf4;
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+  }
+  .poster {
+    width: 1080px;
+    height: 1620px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(165deg, #0b2b7a 0%, #1440b0 34%, #2b6de8 60%, #f97316 105%);
+    color: #fff;
+    padding: 72px 64px 56px;
+    display: flex;
+    flex-direction: column;
+  }
+  /* decorative elements */
+  .deco {
+    position: absolute;
+    border-radius: 50%;
+    opacity: .18;
+    pointer-events: none;
+  }
+  .deco-1 { width: 420px; height: 420px; background: #ffd54a; top: -160px; right: -140px; }
+  .deco-2 { width: 300px; height: 300px; background: #fff; bottom: 120px; left: -140px; }
+  .deco-3 { width: 14px; height: 14px; background: #ffd54a; top: 240px; left: 90px; }
+  .deco-4 { width: 10px; height: 10px; background: #fff; top: 400px; right: 100px; }
+  .deco-5 { width: 18px; height: 18px; background: #fff; bottom: 320px; right: 140px; }
+
+  .header { position: relative; z-index: 2; }
+  .kicker {
+    display: inline-block;
+    background: rgba(255,255,255,.16);
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 999px;
+    font-size: 26px;
+    letter-spacing: 6px;
+    padding: 8px 26px;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-size: 76px;
+    font-weight: 900;
+    line-height: 1.18;
+    letter-spacing: 2px;
+  }
+  h1 .hl { color: #ffd54a; }
+  .subtitle {
+    margin-top: 22px;
+    font-size: 34px;
+    font-weight: 400;
+    color: rgba(255,255,255,.94);
+    letter-spacing: 1px;
+  }
+  .rocket {
+    position: absolute;
+    right: 8px;
+    top: 130px;
+    width: 150px;
+    height: 150px;
+    animation: float 3.2s ease-in-out infinite;
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-6deg); }
+    50% { transform: translateY(-14px) rotate(-6deg); }
+  }
+
+  .grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-top: 52px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 26px;
+    padding: 32px 30px 28px;
+    color: #1f2937;
+    box-shadow: 0 14px 34px rgba(0,0,0,.20);
+  }
+  .card-head { display: flex; align-items: center; gap: 18px; margin-bottom: 14px; }
+  .icon {
+    width: 66px;
+    height: 66px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    flex-shrink: 0;
+  }
+  .icon-1 { background: #e0f2fe; }
+  .icon-2 { background: #fef3c7; }
+  .icon-3 { background: #dbeafe; }
+  .icon-4 { background: #fce7f3; }
+  .icon-5 { background: #dcfce7; }
+  .icon-6 { background: #ede9fe; }
+  .card h2 { font-size: 38px; font-weight: 800; }
+  .card p { font-size: 25px; line-height: 1.5; color: #4b5563; }
+  .card p .kw { color: #f97316; font-weight: 700; }
+
+  .footer {
+    position: relative;
+    z-index: 2;
+    margin-top: auto;
+    text-align: center;
+  }
+  .cta {
+    display: inline-block;
+    background: linear-gradient(90deg, #ff9a3d, #f97316);
+    color: #fff;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border-radius: 999px;
+    padding: 20px 58px;
+    box-shadow: 0 12px 30px rgba(249,115,22,.45);
+  }
+  .qr {
+    width: 220px;
+    height: 220px;
+    margin: 40px auto 0;
+    border: 4px dashed rgba(255,255,255,.85);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,.92);
+    font-size: 24px;
+    letter-spacing: 3px;
+  }
+  .footnote {
+    margin-top: 26px;
+    font-size: 24px;
+    color: rgba(255,255,255,.85);
+    letter-spacing: 1px;
+  }
+</style>
+</head>
+<body>
+  <div class="poster">
+    <div class="deco deco-1"></div>
+    <div class="deco deco-2"></div>
+    <div class="deco deco-3"></div>
+    <div class="deco deco-4"></div>
+    <div class="deco deco-5"></div>
+
+    <div class="header">
+      <div class="kicker">校园创业指南</div>
+      <h1>大学生创业，<br>从这 <span class="hl">6 个方向</span> 开始</h1>
+      <div class="subtitle">不用等毕业，校园就是第一片试验田</div>
+      <svg class="rocket" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="rotate(45 50 50)">
+          <path d="M50 8 C62 22 66 38 62 52 L38 52 C34 38 38 22 50 8Z" fill="#ffd54a"/>
+          <circle cx="50" cy="34" r="8" fill="#fff"/>
+          <path d="M36 54 L28 78 L42 68 Z" fill="#f97316"/>
+          <path d="M64 54 L72 78 L58 68 Z" fill="#f97316"/>
+          <path d="M46 58 L50 74 L54 58 L50 64 Z" fill="#fff" opacity=".9"/>
+        </g>
+        <ellipse cx="50" cy="94" rx="20" ry="5" fill="#fff" opacity=".35"/>
+      </svg>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-head"><div class="icon icon-1">💨</div><h2>校园跑腿 · 生活服务</h2></div>
+        <p>代取快递、拼单奶茶、宿舍小卖部，<span class="kw">需求就在身边</span></p>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="icon icon-2">📱</div><h2>内容创作</h2></div>
+        <p>短视频、小红书、公众号，<span class="kw">一部手机就能起步</span></p>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="icon icon-3">💻</div><h2>技能变现</h2></div>
+        <p>PPT 代做、剪辑、设计、家教，<span class="kw">把你会的变成钱</span></p>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="icon icon-4">🛒</div><h2>校园社群团购</h2></div>
+        <p>宿舍零食、节日礼盒、班级拼团，<span class="kw">同学就是第一批顾客</span></p>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="icon icon-5">🛠️</div><h2>校园数字化工具</h2></div>
+        <p>课表小程序、资料共享库、选课助手，<span class="kw">技术同学的主场</span></p>
+      </div>
+      <div class="card">
+        <div class="card-head"><div class="icon icon-6">♻️</div><h2>公益 + 创业</h2></div>
+        <p>旧物回收、绿色校园，<span class="kw">有情怀也有机会</span></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="cta">迈出第一步，比完美更重要</div>
+      <div class="qr">二维码位<br>扫码报名</div>
+      <div class="footnote">适合在校生起步的低门槛方向 · 0 成本也能开始</div>
+    </div>
+  </div>
+</body>
+</html>
